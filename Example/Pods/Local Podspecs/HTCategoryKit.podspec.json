@@ -1,0 +1,22 @@
+{
+  "name": "HTCategoryKit",
+  "version": "0.1.0",
+  "summary": "ICP-Mobile 项目 组件库之分类组件 HTCategory.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/icpmobile/HTCategoryKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "lqve521": "lqve521@163.com"
+  },
+  "source": {
+    "git": "https://github.com/icpmobile/HTCategoryKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HTCategoryKit/Classes/**/*"
+}

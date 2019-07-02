@@ -1,0 +1,16 @@
+PODS:
+  - HTCategoryKit (0.1.0)
+
+DEPENDENCIES:
+  - HTCategoryKit (from `../`)
+
+EXTERNAL SOURCES:
+  HTCategoryKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HTCategoryKit: a616168ec07b799dbd203898198f5f1e30dc9684
+
+PODFILE CHECKSUM: 8d538bb53f76f6e1b12fb4e06ee40898efa13d49
+
+COCOAPODS: 1.6.1
