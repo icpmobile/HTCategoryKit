@@ -1,6 +1,6 @@
 {
   "name": "HTCategoryKit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "ICP-Mobile 项目 组件库之分类组件 HTCategory.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/icpmobile/HTCategoryKit",
@@ -13,15 +13,265 @@
   },
   "source": {
     "git": "https://github.com/icpmobile/HTCategoryKit.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "HTCategoryKit/Classes/**/*",
-  "dependencies": {
-    "MBProgressHUD": [
+  "subspecs": [
+    {
+      "name": "CoreData",
+      "source_files": "HTCategoryKit/Classes/CoreData/**/*"
+    },
+    {
+      "name": "CoreLocation",
+      "source_files": "HTCategoryKit/Classes/CoreLocation/**/*"
+    },
+    {
+      "name": "QuartzCore",
+      "source_files": "HTCategoryKit/Classes/QuartzCore/**/*"
+    },
+    {
+      "name": "Other",
+      "source_files": "HTCategoryKit/Classes/Other/**/*",
+      "dependencies": {
+        "MBProgressHUD": [
 
-    ]
-  }
+        ]
+      }
+    },
+    {
+      "name": "Foundation",
+      "subspecs": [
+        {
+          "name": "NSArray",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSArray"
+        },
+        {
+          "name": "NSBundle",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSBundle"
+        },
+        {
+          "name": "NSData",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSData"
+        },
+        {
+          "name": "NSDate",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSDate"
+        },
+        {
+          "name": "NSDateFormatter",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSDateFormatter"
+        },
+        {
+          "name": "NSDictionary",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSDictionary"
+        },
+        {
+          "name": "NSException",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSException"
+        },
+        {
+          "name": "NSFileHandle",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSFileHandle"
+        },
+        {
+          "name": "NSFileManager",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSFileManager"
+        },
+        {
+          "name": "NSHTTPCookieStorage",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSHTTPCookieStorage"
+        },
+        {
+          "name": "NSIndexPath",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSIndexPath"
+        },
+        {
+          "name": "NSInvocation",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSInvocation"
+        },
+        {
+          "name": "NSNotificationCenter",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSNotificationCenter"
+        },
+        {
+          "name": "NSNumber",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSNumber"
+        },
+        {
+          "name": "NSObject",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSObject"
+        },
+        {
+          "name": "NSRunLoop",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSRunLoop"
+        },
+        {
+          "name": "NSSet",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSSet"
+        },
+        {
+          "name": "NSString",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSString",
+          "dependencies": {
+            "HTCategoryKit/Foundation/NSData": [
+
+            ]
+          }
+        },
+        {
+          "name": "NSTimer",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSTimer"
+        },
+        {
+          "name": "NSURL",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSURL"
+        },
+        {
+          "name": "NSURLConnection",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSURLConnection"
+        },
+        {
+          "name": "NSURLRequest",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSURLRequest"
+        },
+        {
+          "name": "NSUserDefaults",
+          "source_files": "HTCategoryKit/Classes/Foundation/NSUserDefaults"
+        }
+      ]
+    },
+    {
+      "name": "UIKit",
+      "subspecs": [
+        {
+          "name": "UIAlertView",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIAlertView"
+        },
+        {
+          "name": "UIApplication",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIApplication"
+        },
+        {
+          "name": "UIBarButtonItem",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIBarButtonItem"
+        },
+        {
+          "name": "UIBezierPath",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIBezierPath"
+        },
+        {
+          "name": "UIButton",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIButton"
+        },
+        {
+          "name": "UIColor",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIColor"
+        },
+        {
+          "name": "UIControl",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIControl"
+        },
+        {
+          "name": "UIDevice",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIDevice"
+        },
+        {
+          "name": "UIFont",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIFont"
+        },
+        {
+          "name": "UIImage",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIImage"
+        },
+        {
+          "name": "UIImageView",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIImageView"
+        },
+        {
+          "name": "UILable",
+          "source_files": "HTCategoryKit/Classes/UIKit/UILable"
+        },
+        {
+          "name": "UINavigationBar",
+          "source_files": "HTCategoryKit/Classes/UIKit/UINavigationBar"
+        },
+        {
+          "name": "UINavigationController",
+          "source_files": "HTCategoryKit/Classes/UIKit/UINavigationController"
+        },
+        {
+          "name": "UINavigationItem",
+          "source_files": "HTCategoryKit/Classes/UIKit/UINavigationItem"
+        },
+        {
+          "name": "UIPopoverController",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIPopoverController"
+        },
+        {
+          "name": "UIResponder",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIResponder"
+        },
+        {
+          "name": "UIScreen",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIScreen"
+        },
+        {
+          "name": "UIScrollView",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIScrollView"
+        },
+        {
+          "name": "UISearchBar",
+          "source_files": "HTCategoryKit/Classes/UIKit/UISearchBar"
+        },
+        {
+          "name": "UISplitViewController",
+          "source_files": "HTCategoryKit/Classes/UIKit/UISplitViewController"
+        },
+        {
+          "name": "UITableView",
+          "source_files": "HTCategoryKit/Classes/UIKit/UITableView"
+        },
+        {
+          "name": "UITableViewCell",
+          "source_files": "HTCategoryKit/Classes/UIKit/UITableViewCell"
+        },
+        {
+          "name": "UITextView",
+          "source_files": "HTCategoryKit/Classes/UIKit/UITextView"
+        },
+        {
+          "name": "UIView",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIView"
+        },
+        {
+          "name": "UIViewController",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIViewController"
+        },
+        {
+          "name": "UIWebView",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIWebView",
+          "dependencies": {
+            "HTCategoryKit/UIKit/UIColor": [
+
+            ]
+          }
+        },
+        {
+          "name": "UIWindow",
+          "source_files": "HTCategoryKit/Classes/UIKit/UIWindow"
+        },
+        {
+          "name": "UITextField",
+          "source_files": "HTCategoryKit/Classes/UIKit/UITextField",
+          "dependencies": {
+            "HTCategoryKit/UIKit/UIView": [
+
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

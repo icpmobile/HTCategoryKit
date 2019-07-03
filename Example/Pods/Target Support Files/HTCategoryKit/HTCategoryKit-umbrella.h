@@ -159,7 +159,6 @@
 #import "UIImage+Orientation.h"
 #import "UIImage+PDF.h"
 #import "UIImage+RemoteSize.h"
-#import "UIImage+Resize.h"
 #import "UIImage+Vector.h"
 #import "UIImageView+Addition.h"
 #import "UIImageView+BetterFace.h"
