@@ -202,6 +202,7 @@
 #import "UITextView+PlaceHolder.h"
 #import "UITextView+Select.h"
 #import "UIView+Animation.h"
+#import "UIView+BadgeValue.h"
 #import "UIView+BlockGesture.h"
 #import "UIView+Constraints.h"
 #import "UIView+CustomBorder.h"
