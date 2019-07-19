@@ -1,6 +1,6 @@
 {
   "name": "HTCategoryKit",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "summary": "ICP-Mobile 项目 组件库之分类组件 HTCategory.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/icpmobile/HTCategoryKit",
@@ -13,10 +13,15 @@
   },
   "source": {
     "git": "https://github.com/icpmobile/HTCategoryKit.git",
-    "tag": "0.1.1"
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "8.0"
+  },
+  "resource_bundles": {
+    "HTCategoryKit": [
+      "HTCategoryKit/Assets/*.png"
+    ]
   },
   "subspecs": [
     {
@@ -34,6 +39,15 @@
     {
       "name": "Other",
       "source_files": "HTCategoryKit/Classes/Other/**/*",
+      "dependencies": {
+        "MBProgressHUD": [
+
+        ]
+      }
+    },
+    {
+      "name": "MBProgressHUD",
+      "source_files": "HTCategoryKit/Classes/MBProgressHUD",
       "dependencies": {
         "MBProgressHUD": [
 
