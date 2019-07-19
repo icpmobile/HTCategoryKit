@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HTCategoryKit'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'ICP-Mobile 项目 组件库之分类组件 HTCategory.'
 
 # This description is used to generate tags and improve search results.
