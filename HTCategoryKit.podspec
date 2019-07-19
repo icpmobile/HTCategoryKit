@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HTCategoryKit'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'ICP-Mobile 项目 组件库之分类组件 HTCategory.'
 
 # This description is used to generate tags and improve search results.
@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
 #  s.source_files = 'HTCategoryKit/Classes/**/*'
 
-  # s.resource_bundles = {
-  #   'HTCategoryKit' => ['HTCategoryKit/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'HTCategoryKit' => ['HTCategoryKit/Assets/*.png']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
@@ -56,6 +56,12 @@ TODO: Add long description of the pod here.
     ot.source_files = 'HTCategoryKit/Classes/Other/**/*'
     ot.dependency 'MBProgressHUD'
   end
+
+  s.subspec 'MBProgressHUD' do |mb|
+    mb.source_files = 'HTCategoryKit/Classes/MBProgressHUD'
+    mb.dependency 'MBProgressHUD'
+  end
+
   
   
   s.subspec 'Foundation' do |ss|

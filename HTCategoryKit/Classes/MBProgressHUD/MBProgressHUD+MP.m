@@ -37,14 +37,14 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.mode=MBProgressHUDModeText;
     
-    hud.labelText= message;
-    hud.labelFont = [UIFont systemFontOfSize:15];
+    hud.label.text= message;
+    hud.label.font = [UIFont systemFontOfSize:15];
     
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
     //代表需要蒙版效果
     
-    hud.dimBackground = YES;
+    //hud.dimBackground = YES;
     return hud;
 }
 
@@ -60,10 +60,10 @@
 + (MBProgressHUD *)showProgressToView:(UIView *)view Text:(NSString *)text{
     if (view == nil) view = (UIView*)[UIApplication sharedApplication].delegate.window;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.labelText=text;
-    hud.labelFont= [UIFont systemFontOfSize:15];
+    hud.label.text=text;
+    hud.label.font= [UIFont systemFontOfSize:15];
     // 代表需要蒙版效果
-    hud.dimBackground = YES;
+    //hud.dimBackground = YES;
     return hud;
 }
 
@@ -95,18 +95,20 @@
     if (view == nil) view = (UIView*)[UIApplication sharedApplication].delegate.window;
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.labelText=message;
-    hud.labelFont= [UIFont systemFontOfSize:15];
+    hud.label.text= message;
+    hud.label.numberOfLines = 0;
+
+    hud.label.font= [UIFont systemFontOfSize:15];
     //模式
     hud.mode = model;
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
     // 代表需要蒙版效果
-    hud.dimBackground = YES;
+    //hud.dimBackground = YES;
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
     // X秒之后再消失
-    [hud hide:YES afterDelay:time];
+    [hud hideAnimated:YES afterDelay:time];
     
 }
 
@@ -115,10 +117,20 @@
     if (view == nil) view = (UIView*)[UIApplication sharedApplication].delegate.window;
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.labelText=title;
-    hud.labelFont= [UIFont systemFontOfSize:15];
+    hud.label.text=title;
+    hud.label.numberOfLines = 0;
+    hud.label.font= [UIFont systemFontOfSize:15];
+    
+    
+    NSInteger scale = [[UIScreen mainScreen] scale];
+    
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    
+    NSString *backImg = [NSString stringWithFormat:@"%@@%zdx.png",iconName,scale];
+    NSString *backImgStr = [bundle pathForResource:backImg ofType:nil  inDirectory:@"HTCategoryKit.bundle"];
+    
     // 设置图片
-    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:iconName]];
+    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:backImgStr]];
     
     // 再设置模式
     hud.mode = MBProgressHUDModeCustomView;
@@ -127,10 +139,10 @@
     hud.removeFromSuperViewOnHide = YES;
     
     // 代表需要蒙版效果
-    hud.dimBackground = YES;
+    //hud.dimBackground = YES;
     
     // 3秒之后再消失
-    [hud hide:YES afterDelay:1];
+    [hud hideAnimated:YES afterDelay:1];
 }
 
 + (void)hideHUDForView:(UIView *)view
