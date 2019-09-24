@@ -61,7 +61,7 @@
 /**
  *  自动消失提示,带默认图
  *
- *  @param warn 要显示的文字
+ *  @param Warn 要显示的文字
  *  @param view  要添加的View
  */
 + (void)showWarn:(NSString *)Warn ToView:(UIView *)view;
@@ -80,7 +80,7 @@
 /**
  *  快速显示一条提示信息
  *
- *  @param showAutoMessage 要显示的文字
+ *  @param message 要显示的文字
  */
 + (void)showAutoMessage:(NSString *)message;
 
@@ -107,7 +107,7 @@
 /**
  *  自定义停留时间，无图
  *
- *  @param text 要显示的文字
+ *  @param message 要显示的文字
  *  @param view 要添加的View
  *  @param time 停留时间
  */
@@ -115,13 +115,11 @@
 
 
 /**
- *  加载视图
+ *  加载菊花视图
  *
  *  @param view 要添加的View
  */
-+ (void)showLoadToView:(UIView *)view;
-
-
++(MBProgressHUD *)showLoadMessage:(NSString *)message ToView:(UIView *)view;
 
 /**
  *  进度条View
